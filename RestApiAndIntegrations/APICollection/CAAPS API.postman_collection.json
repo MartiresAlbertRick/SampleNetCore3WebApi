@@ -1,0 +1,1785 @@
+{
+	"info": {
+		"_postman_id": "fe828412-624d-46e1-a836-d5b86c5c4b8e",
+		"name": "CAAPS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetNonPoVendors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/non-po-vendors?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"non-po-vendors"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/currencies?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"currencies"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/currencies/2?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"currencies",
+						"2"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNonPoVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/non-po-vendors/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"non-po-vendors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoutingCodes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/routing-codes?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"routing-codes"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoutingCode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/routing-codes/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"routing-codes",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUnitOfMeasures",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/unit-of-measures?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"unit-of-measures"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUnitOfMeasure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/unit-of-measures/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"unit-of-measures",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEntities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/entities?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEntity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/entities/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"entities",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetValidAdditionalCharges",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/valid-additional-charges?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"valid-additional-charges"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetValidAdditionalCharge",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/valid-additional-charges/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"valid-additional-charges",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVendors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/vendors?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"vendors"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/vendors/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"vendors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44012577-2508-44ff-b45e-69c72783ed8a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"vendorUID\": \"string\",\r\n  \"entityCode\": \"stringstring\",\r\n  \"vendorName\": \"string\",\r\n  \"vendorCode\": \"string\",\r\n  \"vendorBusinessNumber\": \"string\",\r\n  \"vendorARContactName\": \"string\",\r\n  \"vendorARContactEmailAddress\": \"string\",\r\n  \"vendorAddressLine01\": \"string\",\r\n  \"vendorAddressLine02\": \"string\",\r\n  \"vendorAddressLine03\": \"string\",\r\n  \"vendorAddressLine04\": \"string\",\r\n  \"vendorSuburb\": \"string\",\r\n  \"vendorState\": \"string\",\r\n  \"vendorPostCode\": \"string\",\r\n  \"vendorCountry\": \"string\",\r\n  \"bankBsbNumber\": \"string\",\r\n  \"bankAccountNumber\": \"string\",\r\n  \"paymentTermsCode\": \"string\",\r\n  \"vendorCurrencyCode\": \"string\",\r\n  \"vendorBankAccountList\": \"string\",\r\n  \"poRequiredYN\": true,\r\n  \"custom01\": \"string\",\r\n  \"custom02\": \"string\",\r\n  \"custom03\": \"string\",\r\n  \"custom04\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/vendors?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"vendors"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "868975d4-d2ae-4b00-8805-63cc46fa1860",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"vendorUID\": null,\r\n    \"entityCode\": \"EN01\",\r\n    \"vendorName\": \"YOGGI MILKI PTY LTD\",\r\n    \"vendorCode\": \"YOGGI001\",\r\n    \"vendorBusinessNumber\": \"31609392092\",\r\n    \"vendorARContactName\": \"\",\r\n    \"vendorARContactEmailAddress\": \"erin.mcgregor@acumendata.com\",\r\n    \"vendorAddressLine01\": \"GPO BOX 209\",\r\n    \"vendorAddressLine02\": \"\",\r\n    \"vendorAddressLine03\": \"\",\r\n    \"vendorAddressLine04\": \"\",\r\n    \"vendorSuburb\": \"BRISBANE\",\r\n    \"vendorState\": \"QLD\",\r\n    \"vendorPostCode\": \"4001\",\r\n    \"vendorCountry\": \"AUSTRALIA\",\r\n    \"bankBsbNumber\": \"184132\",\r\n    \"bankAccountNumber\": \"306609748\",\r\n    \"paymentTermsCode\": \"30 DAYS DOI\",\r\n    \"vendorCurrencyCode\": null,\r\n    \"vendorBankAccountList\": null,\r\n    \"poRequiredYN\": false,\r\n    \"custom01\": null,\r\n    \"custom02\": null,\r\n    \"custom03\": null,\r\n    \"custom04\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/vendors/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"vendors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b43c848-c36d-44ca-865b-0ea415be6bb1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/vendors/91?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"vendors",
+						"91"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd3f1adf-d97b-4a6f-86cf-f763cfa644ad",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"value\": \"EN01\",\r\n    \"path\": \"/entityCode\",\r\n    \"op\": \"replace\",\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/vendors/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"vendors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGoodsReceipts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "63da4b35-9540-4378-aba1-03f4fe893a19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/goods-receipts?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"goods-receipts"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGoodsReceipt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ae71beff-ccd8-4b6f-bc6e-c650e5a81b86",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/goods-receipts/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"goods-receipts",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostGoodsReceipt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "907ea2ad-1350-49cb-a7b3-71b5962fa402",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"goodsReceivedNumber\": \"12344\",\n    \"receivedBy\": \"AM\",\n    \"receivedDate\": \"2019-12-01\",\n    \"poNumber\": \"000001\",\n    \"poLineNumber\": 1,\n    \"receiptedQty\": 7,\n    \"receiptedValueTaxEx\": 10.00,\n    \"entityCode\": \"EN03\",\n    \"custom01\": null,\n    \"custom02\": null,\n    \"custom03\": null,\n    \"custom04\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/goods-receipts?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"goods-receipts"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutGoodsReceipt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5ce2c105-b6ce-430f-8c71-f394e3e22667",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"goodsReceivedNumber\": \"123\",\n    \"receivedBy\": \"AM\",\n    \"receivedDate\": \"2019-10-01\",\n    \"poNumber\": \"540001254\",\n    \"poLineNumber\": 1,\n    \"receiptedQty\": 7,\n    \"receiptedValueTaxEx\": 10.00,\n    \"entityCode\": \"EN03\",\n    \"custom01\": null,\n    \"custom02\": null,\n    \"custom03\": null,\n    \"custom04\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/goods-receipts/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"goods-receipts",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteGoodsReceipt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d044367f-64fc-4086-9738-d901467f1d3a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/goods-receipts/615?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"goods-receipts",
+						"615"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchGoodsReceipt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1dbee3da-630c-4427-9602-3b5a413e3891",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"value\": \"AM\",\r\n    \"path\": \"/receivedBy\",\r\n    \"op\": \"replace\",\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/goods-receipts/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"goods-receipts",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPurchaseOrders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0e5d60b-1ad3-4c4d-adbf-94c18d3f3896",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/purchase-orders?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"purchase-orders"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPurchaseOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6c8bd55-9553-4130-a52a-1393d9e34e46",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/purchase-orders/559?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"purchase-orders",
+						"559"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPurchaseOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "414cf6cf-659e-429d-a9a8-515a5647c5f7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entityCode\": \"EN03\",\n    \"poDate\": \"2018-05-18\",\n    \"poRaisedByUsername\": \"AP2\",\n    \"poRequisitionerUserName\": null,\n    \"poNumber\": \"12345\",\n    \"poOriginalAmountTaxEx\": 187.82,\n    \"poOpenAmountTaxEx\": 187.82,\n    \"poType\": \"X\",\n    \"poStatusCode\": \"A\",\n    \"poCurrencyCode\": \"AUD\",\n    \"expectedDate\": \"2018-12-25\",\n    \"lineExpectedDate\": \"2018-12-25\",\n    \"lineNumber\": 1,\n    \"lineProductCode\": \"COPAK0554\",\n    \"lineOriginalQuantity\": null,\n    \"lineOpenQuantity\": 7,\n    \"lineOriginalAmountTaxEx\": 174.86,\n    \"lineOpenAmountTaxEx\": 174.86,\n    \"lineUOM\": \"EA\",\n    \"lineUnitPrice\": 24.98,\n    \"lineTaxCode\": \"I1\",\n    \"lineGLCode\": \"EN03-50004\",\n    \"lineDescription\": \"SUGAR, SPICE, EVERYTHING NICE\",\n    \"vendorCode\": \"KALDI001\",\n    \"branchCode\": \"B021\",\n    \"divisionCode\": null,\n    \"siteCode\": \"S210\",\n    \"businessUnitCode\": \"\",\n    \"custom01\": null,\n    \"custom02\": null,\n    \"custom03\": null,\n    \"custom04\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/purchase-orders?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"purchase-orders"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutPurchaseOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "151eb91a-9be6-4de6-a304-41b0df80c63f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"entityCode\": \"EN03\",\n    \"poDate\": \"2018-05-18\",\n    \"poRaisedByUsername\": \"AP2\",\n    \"poRequisitionerUserName\": null,\n    \"poNumber\": \"540001254\",\n    \"poOriginalAmountTaxEx\": 187.82,\n    \"poOpenAmountTaxEx\": 187.82,\n    \"poType\": \"X\",\n    \"poStatusCode\": \"A\",\n    \"poCurrencyCode\": \"AUD\",\n    \"expectedDate\": \"2018-12-25\",\n    \"lineExpectedDate\": \"2018-12-25\",\n    \"lineNumber\": 1,\n    \"lineProductCode\": \"COPAK0554\",\n    \"lineOriginalQuantity\": null,\n    \"lineOpenQuantity\": 7,\n    \"lineOriginalAmountTaxEx\": 174.86,\n    \"lineOpenAmountTaxEx\": 174.86,\n    \"lineUOM\": \"EA\",\n    \"lineUnitPrice\": 24.98,\n    \"lineTaxCode\": \"I1\",\n    \"lineGLCode\": \"EN03-50004\",\n    \"lineDescription\": \"SUGAR, SPICE, EVERYTHING NICE\",\n    \"vendorCode\": \"KALDI001\",\n    \"branchCode\": \"B021\",\n    \"divisionCode\": null,\n    \"siteCode\": \"S210\",\n    \"businessUnitCode\": \"\",\n    \"custom01\": null,\n    \"custom02\": null,\n    \"custom03\": null,\n    \"custom04\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/purchase-orders/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"purchase-orders",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePurchaseOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "71e0b3a4-8644-4fc7-9a25-b9c01fb3058f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/purchase-orders/686?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"purchase-orders",
+						"686"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchPurchaseOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "66d2f564-af1b-49ee-851c-bb75643c4faa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"value\": \"EN01\",\r\n    \"path\": \"/entityCode\",\r\n    \"op\": \"replace\",\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/purchase-orders/686?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"purchase-orders",
+						"686"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetImportConfirmations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d0073750-ba00-492d-85b9-3f91e8cf44d4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/import-confirmations?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"import-confirmations"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetImportConfirmation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b655ed75-b4d5-4fe1-986c-08226428c9c5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/import-confirmations/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"import-confirmations",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostImportConfirmation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b8654e3-0dde-4761-9599-8b8f6b50ef99",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"caapsUniqueId\": \"D0000002\",\n    \"importStatus\": \"PASS\",\n    \"importMessage\": \"SUCCESS\",\n    \"clientTransactionId\": null,\n    \"custom01\": null,\n    \"custom02\": null,\n    \"custom03\": null,\n    \"custom04\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/import-confirmations?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"import-confirmations"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteImportConfirmation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ec8bf30a-7694-468c-be1b-ca333103ad99",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/import-confirmations/2?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"import-confirmations",
+						"2"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e18a936f-b275-4f04-a0bb-ba0414226ac9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/payment-updates?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"payment-updates"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49f94e77-f117-4ed4-a203-a563c643211f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/payment-updates/1?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"payment-updates",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPayment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5e1d46a1-beab-4607-87d9-441928885419",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"caapsUniqueId\": \"D00000002\",\r\n    \"paymentStatus\": null,\r\n    \"paymentDate\": \"2019-12-12\",\r\n    \"paymentAmount\": 100.04,\r\n    \"paymentMethod\": \"\",\r\n    \"clientTransactionId\": null,\r\n    \"paymentBatchNumber\": null,\r\n    \"custom01\": null,\r\n    \"custom02\": null,\r\n    \"custom03\": null,\r\n    \"custom04\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/payment-updates?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"payment-updates"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePayment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd1739d4-ce37-4b46-8c2a-95282a9ef3d1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/payment-updates/33?client=CAAPS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"payment-updates",
+						"33"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "CAAPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostApDocument",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"caapsRecordId\": \"string\",\r\n  \"docDateIssued\": \"2020-01-23T06:59:54.170Z\",\r\n  \"vendorCode\": \"string\",\r\n  \"docRefNumberA\": \"string\",\r\n  \"processType\": \"string\",\r\n  \"docAmountTotal\": 0,\r\n  \"entityCode\": \"string\",\r\n  \"poNumber\": \"string\",\r\n  \"docAmountTax\": 0,\r\n  \"docDescription\": \"string\",\r\n  \"adDocDateReceived\": \"2020-01-23T06:59:54.170Z\",\r\n  \"exportDate\": \"2020-01-23T06:59:54.170Z\",\r\n  \"processStatusCurrent\": \"string\",\r\n  \"custom01\": \"string\",\r\n  \"custom02\": \"string\",\r\n  \"custom03\": \"string\",\r\n  \"custom04\": \"string\",\r\n  \"importBatchID\": 0,\r\n  \"roleIDs\": \"string\",\r\n  \"adUniqueIdentifier\": \"string\",\r\n  \"fileName\": \"string\",\r\n  \"docHeaderUID\": \"string6\",\r\n  \"docType\": \"string\",\r\n  \"vendorBusinessNumber\": \"string\",\r\n  \"accountNumber\": \"string\",\r\n  \"docAmountTaxEx\": 0,\r\n  \"docAmountCurrency\": \"string\",\r\n  \"statementInvoiceNumber\": \"string\",\r\n  \"vendorBankBsb\": \"string\",\r\n  \"vendorBankAccountNumber\": \"string\",\r\n  \"routingCode\": \"string\",\r\n  \"docLineItemCount\": 0,\r\n  \"adDocReceivedSource\": \"string\",\r\n  \"adDocReceivedType\": \"string\",\r\n  \"docMultiplePoInHeaderYN\": true,\r\n  \"dvRecordCreatedDate\": \"2020-01-23T06:59:54.170Z\",\r\n  \"lineItems\": [\r\n    {\r\n      \"id\": 0,\r\n      \"recordId\": 0,\r\n      \"lineHeaderUID\": \"string\",\r\n      \"lineNumber\": 0,\r\n      \"linePoNumber\": \"string\",\r\n      \"lineOriginalPoNumber\": \"string\",\r\n      \"lineProductCode\": \"string\",\r\n      \"lineOriginalProductCode\": \"string\",\r\n      \"lineValidAdditionalCharge\": \"string\",\r\n      \"lineQuantity\": 0,\r\n      \"lineUOM\": \"string\",\r\n      \"lineUnitAmountTaxEx\": 0,\r\n      \"lineAmountTax\": 0,\r\n      \"lineAmountTaxEx\": 0,\r\n      \"lineAmountTotal\": 0,\r\n      \"lineDescription\": \"string\",\r\n      \"poIssuedBy\": \"string\",\r\n      \"poType\": \"string\",\r\n      \"linePoLineNumber\": \"string\",\r\n      \"lineTaxCode\": \"string\",\r\n      \"linePoSuffix\": \"string\",\r\n      \"lineIsGLCoded\": true,\r\n      \"linePoPrefix\": \"string\",\r\n      \"originalUnitAmount\": 0,\r\n      \"lineCancelledUserApprovedYN\": true,\r\n      \"lineOriginalAmountTotal\": 0,\r\n      \"lineRoutingCode\": \"string\",\r\n      \"matchType\": null,\r\n      \"vacNotPoMatchedYN\": true\r\n    }\r\n  ],\r\n  \"accountCodingLines\": [\r\n    {\r\n      \"id\": 0,\r\n      \"recordId\": 0,\r\n      \"lineNumber\": 0,\r\n      \"lineAccountType\": \"string\",\r\n      \"lineAccountCodeA\": \"string\",\r\n      \"lineAccountCodeB\": \"string\",\r\n      \"lineAccountCodeC\": \"string\",\r\n      \"lineAccountCodeD\": \"string\",\r\n      \"lineAccountCodeE\": \"string\",\r\n      \"lineAccountCodeF\": \"string\",\r\n      \"lineAmountTax\": 0,\r\n      \"lineAmountTaxEx\": 0,\r\n      \"lineAmountTotal\": 0,\r\n      \"lineApprovedYN\": true,\r\n      \"lineCalcPercent\": 0,\r\n      \"lineDescription\": \"string\",\r\n      \"lineCustomFieldA\": \"string\",\r\n      \"lineCustomFieldB\": \"string\",\r\n      \"lineTaxCode\": \"string\",\r\n      \"glCode\": \"string\",\r\n      \"glCodeDesc\": \"string\",\r\n      \"lineVACLineNumber\": 0,\r\n      \"lineVACDesc\": \"string\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/ap-documents?client=HALLMARC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"ap-documents"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "HALLMARC"
+						}
+					]
+				},
+				"description": "/api/ap-document"
+			},
+			"response": []
+		},
+		{
+			"name": "UploadApDocument",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/App_Data/Temp/test.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:63186/api/ap-documents/1206/files?client=HALLMARC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"ap-documents",
+						"1206",
+						"files"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "HALLMARC"
+						}
+					]
+				},
+				"description": "/api/ap-documents/{id}/files"
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadApDocument",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:63186/api/ap-documents/1206/files/download?client=HALLMARC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63186",
+					"path": [
+						"api",
+						"ap-documents",
+						"1206",
+						"files",
+						"download"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "HALLMARC"
+						}
+					]
+				},
+				"description": "/api/ap-documents/{id}/files/download"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

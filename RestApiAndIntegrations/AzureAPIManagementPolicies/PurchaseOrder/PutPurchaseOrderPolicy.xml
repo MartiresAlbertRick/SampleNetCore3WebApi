@@ -1,0 +1,97 @@
+<!--
+    IMPORTANT:
+    - Policy elements can appear only within the <inbound>, <outbound>, <backend> section elements.
+    - To apply a policy to the incoming request (before it is forwarded to the backend service), place a corresponding policy element within the <inbound> section element.
+    - To apply a policy to the outgoing response (before it is sent back to the caller), place a corresponding policy element within the <outbound> section element.
+    - To add a policy, place the cursor at the desired insertion point and select a policy from the sidebar.
+    - To remove a policy, delete the corresponding policy statement from the policy document.
+    - Position the <base> element within a section element to inherit all policies from the corresponding section element in the enclosing scope.
+    - Remove the <base> element to prevent inheriting policies from the corresponding section element in the enclosing scope.
+    - Policies are applied in the order of their appearance, from the top down.
+    - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
+-->
+<policies>
+    <inbound>
+        <base />
+        <choose>
+            <when condition="@{ return (context.Request.Headers.TryGetValue("x-client-id", out var xClientId) && xClientId[0] == "ELDERSSAP") || (context.Request.Url.Query.TryGetValue("client", out var client) && client[0] == "ELDERSSAP"); }">
+                <set-body template="liquid">
+                    {% assign id = context.Request.MatchedParameters["id"]; %}
+                    {
+                        "id" : {{id}}
+                        "entityCode" : "{{body.ZPO_BT.IDOC.ZPO01.ENTITY_CODE}}",
+                        "poDate" : "{{body.ZPO_BT.IDOC.ZPO01.PO_DATE}}",
+                        "poRaisedByUsername" : "{{body.ZPO_BT.IDOC.ZPO01.PO_RAISED_BY_USERNAME}}",
+                        "poRequisitionerUserName" : "{{body.ZPO_BT.IDOC.ZPO01.PO_REQUISTIONER_USERNAME}}",
+                        "poNumber" : "{{body.ZPO_BT.IDOC.ZPO01.PO_NUMBER}}",
+                        "poOriginalAmountTaxEx" : "{{body.ZPO_BT.IDOC.ZPO01.PO_ORIGINAL_AMOUNT_TAX_EX}}",
+                        "poOpenAmountTaxEx" : "{{body.ZPO_BT.IDOC.ZPO01.PO_OPEN_AMOUNT_TAX_EX}}",
+                        "poType" : "{{body.ZPO_BT.IDOC.ZPO01.PO_TYPE}}",
+                        "poStatusCode" : "{{body.ZPO_BT.IDOC.ZPO01.PO_STATUS_CODE}}",
+                        "poCurrencyCode" : "{{body.ZPO_BT.IDOC.ZPO01.PO_CURRENCY_CODE}}",
+                        "expectedDate" : "{{body.ZPO_BT.IDOC.ZPO01.EXPECTED_DATE}}",
+                        "lineExpectedDate" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_EXPECTED_DATE}}",
+                        "lineNumber" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_NUMBER}}",
+                        "lineProductCode" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_PRODUCT_CODE}}",
+                        "lineOriginalQuantity" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_ORIGINAL_QUANTITY}}",
+                        "lineOpenQuantity" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_OPEN_QUANTITY}}",
+                        "lineOriginalAmountTaxEx" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_ORIGINAL_AMOUNT_TAX_EX}}",
+                        "lineOpenAmountTaxEx" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_OPEN_AMOUNT_TAX_EX}}",
+                        "lineUOM" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_UOM}}",
+                        "lineUnitPrice" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_UNIT_PRICE}}",
+                        "lineTaxCode" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_TAX_CODE}}",
+                        "lineGLCode" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_GL_CODE}}",
+                        "lineDescription" : "{{body.ZPO_BT.IDOC.ZPO01.LINE_DESCRIPTION}}",
+                        "vendorCode" : "{{body.ZPO_BT.IDOC.ZPO01.VENDOR_CODE}}",
+                        "branchCode" : "{{body.ZPO_BT.IDOC.ZPO01.BRANCH_CODE}}",
+                        "divisionCode" : "{{body.ZPO_BT.IDOC.ZPO01.DIVISION_CODE}}",
+                        "siteCode" : "{{body.ZPO_BT.IDOC.ZPO01.SITE_CODE}}",
+                        "businessUnitCode" : "{{body.ZPO_BT.IDOC.ZPO01.BUSINESS_UNIT_CODE}}",
+                        "custom01" : "{{body.ZPO_BT.IDOC.ZPO01.CUSTOM_01}}",
+                        "custom02" : "{{body.ZPO_BT.IDOC.ZPO01.CUSTOM_02}}",
+                        "custom03" : "{{body.ZPO_BT.IDOC.ZPO01.CUSTOM_03}}",
+                        "custom04" : "{{body.ZPO_BT.IDOC.ZPO01.CUSTOM_04}}"
+                    }
+                </set-body>
+                <set-header name="Content-Type" exists-action="override">
+                    <value>application/json</value>
+                </set-header>
+            </when>
+            <otherwise>
+                <set-body>@{
+                    return context.Request.Body.As<string>();
+                }</set-body>
+            </otherwise>
+        </choose>
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <base />
+    </outbound>
+    <on-error>
+        <base />
+        <set-header name="ErrorSource" exists-action="override">
+            <value>@(context.LastError.Source)</value>
+        </set-header>
+        <set-header name="ErrorReason" exists-action="override">
+            <value>@(context.LastError.Reason)</value>
+        </set-header>
+        <set-header name="ErrorMessage" exists-action="override">
+            <value>@(context.LastError.Message)</value>
+        </set-header>
+        <set-header name="ErrorScope" exists-action="override">
+            <value>@(context.LastError.Scope)</value>
+        </set-header>
+        <set-header name="ErrorSection" exists-action="override">
+            <value>@(context.LastError.Section)</value>
+        </set-header>
+        <set-header name="ErrorPath" exists-action="override">
+            <value>@(context.LastError.Path)</value>
+        </set-header>
+        <set-header name="ErrorStatusCode" exists-action="override">
+            <value>@(context.Response.StatusCode.ToString())</value>
+        </set-header>
+    </on-error>
+</policies>

@@ -1,0 +1,960 @@
+{
+	"info": {
+		"_postman_id": "4bb051dc-31cd-495c-abfd-eb8e9ca95168",
+		"name": "CAAPS API - GET only tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetNonPoVendors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/non-po-vendors?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"non-po-vendors"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/currencies?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"currencies"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/currencies/2?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"currencies",
+						"2"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNonPoVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/non-po-vendors/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"non-po-vendors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoutingCodes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/routing-codes?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"routing-codes"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoutingCode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/routing-codes/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"routing-codes",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUnitOfMeasures",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/units-of-measure?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"units-of-measure"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUnitOfMeasure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/units-of-measure/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"units-of-measure",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEntities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/entities?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEntity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/entities/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"entities",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetValidAdditionalCharges",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/valid-additional-charges?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"valid-additional-charges"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetValidAdditionalCharge",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/valid-additional-charges/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"valid-additional-charges",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVendors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48e2d280-a637-49a3-8ca1-6e20072f6a03",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/vendors?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"vendors"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVendor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68fac283-acab-427f-8c3c-8411fdf839df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/vendors/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"vendors",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGoodsReceipts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "63da4b35-9540-4378-aba1-03f4fe893a19",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/goods-receipts?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"goods-receipts"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGoodsReceipt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ae71beff-ccd8-4b6f-bc6e-c650e5a81b86",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/goods-receipts/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"goods-receipts",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPurchaseOrders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0e5d60b-1ad3-4c4d-adbf-94c18d3f3896",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/purchase-orders?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"purchase-orders"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPurchaseOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6c8bd55-9553-4130-a52a-1393d9e34e46",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/purchase-orders/559?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"purchase-orders",
+						"559"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e18a936f-b275-4f04-a0bb-ba0414226ac9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/payment-updates?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"payment-updates"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49f94e77-f117-4ed4-a203-a563c643211f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/payment-updates/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"payment-updates",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApDocument",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "49f94e77-f117-4ed4-a203-a563c643211f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/ap-documents/177?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"ap-documents",
+						"177"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetImportConfirmations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d0073750-ba00-492d-85b9-3f91e8cf44d4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/import-confirmations?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"import-confirmations"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetImportConfirmation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b655ed75-b4d5-4fe1-986c-08226428c9c5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/import-confirmations/1?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"import-confirmations",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadApDocument",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/api/ap-documents/1206/files/download?client={{clientId}}",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"api",
+						"ap-documents",
+						"1206",
+						"files",
+						"download"
+					],
+					"query": [
+						{
+							"key": "client",
+							"value": "{{clientId}}"
+						}
+					]
+				},
+				"description": "/api/ap-documents/{id}/files/download"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0fe14ea7-d3b9-4813-a414-b2807f04c992",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "53823769-21d6-4eed-a9a3-5003187448c2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0d2d146d-d930-485b-8092-6099dff039f4",
+			"key": "rootUrl",
+			"value": "https://localhost:5001",
+			"type": "string"
+		},
+		{
+			"id": "1da1a1f7-a582-46cd-9ea1-54c99d92b9d3",
+			"key": "clientId",
+			"value": "URBANISE",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PaymentRequest.Module.Hallmarc": {
+      "commandName": "Project",
+      "commandLineArgs": "Execute"
+    }
+  }
+}

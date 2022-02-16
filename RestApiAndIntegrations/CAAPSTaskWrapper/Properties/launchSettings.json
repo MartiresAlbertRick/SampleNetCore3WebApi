@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CAAPSTaskWrapper": {
+      "commandName": "Project",
+      "commandLineArgs": "--path \"D:\\Deploy\\Publish\\Importer.Urbanise\\Importer.Urbanise.exe\" --args \"Import --type 6\" --email-sender \"pawel.rewak@acumendata.com\" --email-notification-recipients \"\" --email-error-recipients \"pawel.rewak@acumendata.com\" --timeout-ms 60000"
+    }
+  }
+}
