@@ -1,0 +1,1237 @@
+{
+	"info": {
+		"_postman_id": "e2566f3d-6135-4ef5-ba6d-2393ed40b5ce",
+		"name": "CAAPS_API_ELDERS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateVendor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZVENDOR\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000008049023\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZVENDOR\",\r\n                \"MESTYP\": \"ZVENDOR_MT\",\r\n                \"STDMES\": \"ZVENDO\",\r\n                \"SNDPOR\": \"SAPEEQ\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEQCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20200130\",\r\n                \"CRETIM\": \"162452\"\r\n            },\r\n            \"ZVENDOR01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"ENTITY_CODE\": \"2001\",\r\n                \"VENDOR_NAME\": \"TESTCAAPS\",\r\n                \"VENDOR_CODE\": \"1234TEST\"\r\n            },\r\n            \"ZVENDOR02\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"BANK_ACCOUNT_LIST\": \"616-123455767889\"\r\n            },\r\n            \"ZVENDOR03\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"VENDOR_CURR_CODE\": \"AUD\",\r\n                \"PO_REQ_YN\": \"Y\",\r\n                \"PAYMENT_TERMS_CODE\": \"TES1\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/vendors",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"vendors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateVendor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZVENDOR\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000008049023\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZVENDOR\",\r\n                \"MESTYP\": \"ZVENDOR_MT\",\r\n                \"STDMES\": \"ZVENDO\",\r\n                \"SNDPOR\": \"SAPEEQ\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEQCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20200130\",\r\n                \"CRETIM\": \"162452\"\r\n            },\r\n            \"ZVENDOR01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"ENTITY_CODE\": \"2001\",\r\n                \"VENDOR_NAME\": \"TESTCAAPST\",\r\n                \"VENDOR_CODE\": \"12345TEST\"\r\n            },\r\n            \"ZVENDOR02\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"BANK_ACCOUNT_LIST\": \"616-123455767889\"\r\n            },\r\n            \"ZVENDOR03\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"VENDOR_CURR_CODE\": \"AUD\",\r\n                \"PO_REQ_YN\": \"Y\",\r\n                \"PAYMENT_TERMS_CODE\": \"TES1\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/vendors/195",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"vendors",
+						"195"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateManyVendor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"?xml\": {\r\n    \"@version\": \"1.0\",\r\n    \"@encoding\": \"UTF-8\"\r\n  },\r\n  \"ZVENDOR\": {\r\n    \"IDOC\": [\r\n      {\r\n        \"@BEGIN\": \"1\",\r\n        \"EDI_DC40\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"TABNAM\": \"EDI_DC40\",\r\n          \"MANDT\": \"100\",\r\n          \"DOCNUM\": \"0000000008050032\",\r\n          \"DOCREL\": \"702\",\r\n          \"STATUS\": \"30\",\r\n          \"DIRECT\": \"1\",\r\n          \"OUTMOD\": \"4\",\r\n          \"IDOCTYP\": \"ZVENDOR\",\r\n          \"MESTYP\": \"ZVENDOR_MT\",\r\n          \"SNDPOR\": \"SAPEEQ\",\r\n          \"SNDPRT\": \"LS\",\r\n          \"SNDPRN\": \"EEQCLNT100\",\r\n          \"RCVPOR\": \"LOGIC_APP\",\r\n          \"RCVPRT\": \"US\",\r\n          \"RCVPRN\": \"LOGIC_APP\",\r\n          \"CREDAT\": \"20200211\",\r\n          \"CRETIM\": \"190931\",\r\n          \"SERIAL\": \"20200211190931\"\r\n        },\r\n        \"ZVENDOR01\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"VENDOR_NAME\": \"Vendor ABC12\",\r\n          \"VENDOR_CODE\": \"0002026426\",\r\n          \"VENDOR_BUSINESS_NUMBER\": \"26000434625\",\r\n          \"VENDOR_AR_CONTACT_EMAIL\": \"ramkumar-s@hcl.com\",\r\n          \"VENDOR_ADDRESS_LINE_01\": \"HN678\",\r\n          \"VENDOR_ADDRESS_LINE_02\": \"Street addrs\",\r\n          \"VENDOR_SUBURB\": \"Adelaide\",\r\n          \"VENDOR_STATE\": \"SA\",\r\n          \"VENDOR_POST_CODE\": \"3630\",\r\n          \"VENDOR_COUNTRY\": \"AU\"\r\n        },\r\n        \"ZVENDOR02\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"BANK_ACCOUNT_LIST\": \"012-006657004599\"\r\n        },\r\n        \"ZVENDOR03\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"PO_REQ_YN\": \"N\",\r\n          \"PAYMENT_TERMS_CODE\": \"0001\"\r\n        }\r\n      },\r\n      {\r\n        \"@BEGIN\": \"1\",\r\n        \"EDI_DC40\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"TABNAM\": \"EDI_DC40\",\r\n          \"MANDT\": \"100\",\r\n          \"DOCNUM\": \"0000000008050033\",\r\n          \"DOCREL\": \"702\",\r\n          \"STATUS\": \"30\",\r\n          \"DIRECT\": \"1\",\r\n          \"OUTMOD\": \"4\",\r\n          \"IDOCTYP\": \"ZVENDOR\",\r\n          \"MESTYP\": \"ZVENDOR_MT\",\r\n          \"SNDPOR\": \"SAPEEQ\",\r\n          \"SNDPRT\": \"LS\",\r\n          \"SNDPRN\": \"EEQCLNT100\",\r\n          \"RCVPOR\": \"LOGIC_APP\",\r\n          \"RCVPRT\": \"US\",\r\n          \"RCVPRN\": \"LOGIC_APP\",\r\n          \"CREDAT\": \"20200211\",\r\n          \"CRETIM\": \"191456\",\r\n          \"SERIAL\": \"20200211191456\"\r\n        },\r\n        \"ZVENDOR01\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"1000\",\r\n          \"VENDOR_NAME\": \"XYZ traders - CAAPS Test\",\r\n          \"VENDOR_CODE\": \"0002026425\",\r\n          \"VENDOR_BUSINESS_NUMBER\": \"26000435625\",\r\n          \"VENDOR_AR_CONTACT_EMAIL\": \"ramkumar-s@hcl.com\",\r\n          \"VENDOR_ADDRESS_LINE_01\": \"HN67\",\r\n          \"VENDOR_ADDRESS_LINE_02\": \"Street test name\",\r\n          \"VENDOR_SUBURB\": \"Adelaide\",\r\n          \"VENDOR_STATE\": \"SA\",\r\n          \"VENDOR_POST_CODE\": \"3630\",\r\n          \"VENDOR_COUNTRY\": \"AU\"\r\n        },\r\n        \"ZVENDOR02\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"BANK_ACCOUNT_LIST\": \"012-006657008899;064-129343778865\"\r\n        },\r\n        \"ZVENDOR03\": {\r\n          \"@SEGMENT\": \"1\",\r\n          \"PO_REQ_YN\": \"Y\",\r\n          \"PAYMENT_TERMS_CODE\": \"0001\"\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/vendors/bulk",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"vendors",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVendors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/vendors",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"vendors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVendor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/vendors/97",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"vendors",
+						"97"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVendor",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/vendors/97",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"vendors",
+						"97"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateGoodsReceipt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZGR_BT\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000000099045\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZGR_BT\",\r\n                \"MESTYP\": \"ZGOODS_MT\",\r\n                \"STDMES\": \"ZGOODS\",\r\n                \"SNDPOR\": \"SAPEED\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEDCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20190927\",\r\n                \"CRETIM\": \"004950\"\r\n            },\r\n            \"ZGR01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"ENTITY_CODE\": \"2001\",\r\n                \"RECEIVED_DATE\": \"2019-09-08\",\r\n                \"RECEIVED_BY\": \"X0105182\",\r\n                \"PO_NUMBER\": \"4500000010\",\r\n                \"PO_LINE_NUMBER\": \"00001\",\r\n                \"RECEIPTED_QTY\": \"2000\",\r\n                \"GR_NUMBER\": \"14324233\",\r\n                \"REC_VALUE_TAX_EX\": \"1900\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/goods-receipts",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"goods-receipts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateManyGoodsReceipt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"?xml\": {\r\n    \"@version\": \"1.0\",\r\n    \"@encoding\": \"UTF-8\"\r\n  },\r\n  \"ZGR_BT\": {\r\n    \"IDOC\": {\r\n      \"@BEGIN\": \"1\",\r\n      \"EDI_DC40\": {\r\n        \"@SEGMENT\": \"1\",\r\n        \"TABNAM\": \"EDI_DC40\",\r\n        \"MANDT\": \"100\",\r\n        \"DOCNUM\": \"0000000000099128\",\r\n        \"DOCREL\": \"702\",\r\n        \"STATUS\": \"30\",\r\n        \"DIRECT\": \"1\",\r\n        \"OUTMOD\": \"2\",\r\n        \"IDOCTYP\": \"ZGR_BT\",\r\n        \"MESTYP\": \"ZGOODS_MT\",\r\n        \"STDMES\": \"ZGOODS\",\r\n        \"SNDPOR\": \"SAPEED\",\r\n        \"SNDPRT\": \"LS\",\r\n        \"SNDPRN\": \"EEDCLNT100\",\r\n        \"RCVPOR\": \"LOGIC_APP\",\r\n        \"RCVPRT\": \"US\",\r\n        \"RCVPRN\": \"LOGIC_APP\",\r\n        \"CREDAT\": \"20191014\",\r\n        \"CRETIM\": \"181550\"\r\n      },\r\n      \"ZGR01\": [\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"RECEIVED_DATE\": \"2019-06-15\",\r\n          \"RECEIVED_BY\": \"X5091730\",\r\n          \"PO_NUMBER\": \"3001459999\",\r\n          \"PO_LINE_NUMBER\": \"1\",\r\n          \"RECEIPTED_QTY\": \"1\",\r\n          \"GR_NUMBER\": \"5000557700\",\r\n          \"REC_VALUE_TAX_EX\": \"10.46\"\r\n        },\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"RECEIVED_DATE\": \"2019-06-15\",\r\n          \"RECEIVED_BY\": \"X5091730\",\r\n          \"PO_NUMBER\": \"3001459999\",\r\n          \"PO_LINE_NUMBER\": \"2\",\r\n          \"RECEIPTED_QTY\": \"3\",\r\n          \"GR_NUMBER\": \"5000557700\",\r\n          \"REC_VALUE_TAX_EX\": \"79.65\"\r\n        },\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"RECEIVED_DATE\": \"2019-06-15\",\r\n          \"RECEIVED_BY\": \"X5091730\",\r\n          \"PO_NUMBER\": \"3001459999\",\r\n          \"PO_LINE_NUMBER\": \"3\",\r\n          \"RECEIPTED_QTY\": \"4\",\r\n          \"GR_NUMBER\": \"5000557700\",\r\n          \"REC_VALUE_TAX_EX\": \"16.28\"\r\n        },\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"RECEIVED_DATE\": \"2019-06-15\",\r\n          \"RECEIVED_BY\": \"X5091730\",\r\n          \"PO_NUMBER\": \"3001459999\",\r\n          \"PO_LINE_NUMBER\": \"4\",\r\n          \"RECEIPTED_QTY\": \"3\",\r\n          \"GR_NUMBER\": \"5000557700\",\r\n          \"REC_VALUE_TAX_EX\": \"46.86\"\r\n        },\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"RECEIVED_DATE\": \"2019-06-15\",\r\n          \"RECEIVED_BY\": \"X5091730\",\r\n          \"PO_NUMBER\": \"3001459999\",\r\n          \"PO_LINE_NUMBER\": \"5\",\r\n          \"RECEIPTED_QTY\": \"1\",\r\n          \"GR_NUMBER\": \"5000557700\",\r\n          \"REC_VALUE_TAX_EX\": \"24.99\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/goods-receipts/bulk",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"goods-receipts",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateGoodsReceipt",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZGR_BT\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000000099045\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZGR_BT\",\r\n                \"MESTYP\": \"ZGOODS_MT\",\r\n                \"STDMES\": \"ZGOODS\",\r\n                \"SNDPOR\": \"SAPEED\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEDCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20190927\",\r\n                \"CRETIM\": \"004950\"\r\n            },\r\n            \"ZGR01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"ENTITY_CODE\": \"2001\",\r\n                \"RECEIVED_DATE\": \"2019-09-08\",\r\n                \"RECEIVED_BY\": \"X0105182\",\r\n                \"PO_NUMBER\": \"4500000010\",\r\n                \"PO_LINE_NUMBER\": \"00001\",\r\n                \"RECEIPTED_QTY\": \"2000\",\r\n                \"GR_NUMBER\": \"14324233\",\r\n                \"REC_VALUE_TAX_EX\": \"1900\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/goods-receipts/629",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"goods-receipts",
+						"629"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGoodsReceipts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/goods-receipts",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"goods-receipts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetGoodsReceipt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/goods-receipts/615",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"goods-receipts",
+						"615"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteGoodsReceipt",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/goods-receipts/615",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"goods-receipts",
+						"615"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateImportConfirmation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZIMP_BT\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000000099043\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZIMP_BT\",\r\n                \"MESTYP\": \"ZIMPORT_MT\",\r\n                \"STDMES\": \"ZIMPOR\",\r\n                \"SNDPOR\": \"SAPEED\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEDCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20190927\",\r\n                \"CRETIM\": \"004625\"\r\n            },\r\n            \"ZIMP01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"CAAPS_ID\": \"A1234\",\r\n                \"IMPORT_STATUS\": \"SUCCESS\",\r\n                \"IMPORT_MESSAGE\": \"FILE IS SUCCESSFULLY DELIVERED\",\r\n                \"CLIENT_TR_ID\": \"PO123\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/import-confirmations",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"import-confirmations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateManyImportConfirmation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZIMP_BT\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000000099043\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZIMP_BT\",\r\n                \"MESTYP\": \"ZIMPORT_MT\",\r\n                \"STDMES\": \"ZIMPOR\",\r\n                \"SNDPOR\": \"SAPEED\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEDCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20190927\",\r\n                \"CRETIM\": \"004625\"\r\n            },\r\n            \"ZIMP01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"CAAPS_ID\": \"A1234\",\r\n                \"IMPORT_STATUS\": \"SUCCESS\",\r\n                \"IMPORT_MESSAGE\": \"FILE IS SUCCESSFULLY DELIVERED\",\r\n                \"CLIENT_TR_ID\": \"PO123\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/import-confirmations/bulk",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"import-confirmations",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetImportConfirmations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/import-confirmations",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"import-confirmations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetImportConfirmation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/import-confirmations/1",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"import-confirmations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteImportConfirmation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/import-confirmations/1",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"import-confirmations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZPAY_BT\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000000099044\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZPAY_BT\",\r\n                \"MESTYP\": \"ZPAY_MT\",\r\n                \"STDMES\": \"ZPAY_M\",\r\n                \"SNDPOR\": \"SAPEED\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEDCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20190927\",\r\n                \"CRETIM\": \"004749\"\r\n            },\r\n            \"ZPAY01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"CAAPS_ID\": \"A12345\",\r\n                \"PAYMENT_STATUS\": \"SUCCESS\",\r\n                \"PAYMENT_DATE\": \"2019-09-08\",\r\n                \"PAYMENT_AMOUNT\": \"2000\",\r\n                \"PAYMENT_METHOD\": \"CARD\",\r\n                \"CLIENT_TR_ID\": \"A1234\",\r\n                \"PAYMENT_BATCH\": \"ADELAIDE\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/payment-updates",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"payment-updates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateManyPayment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"?xml\": {\r\n        \"@version\": \"1.0\",\r\n        \"@encoding\": \"UTF-8\"\r\n    },\r\n    \"ZPAY_BT\": {\r\n        \"IDOC\": {\r\n            \"@BEGIN\": \"1\",\r\n            \"EDI_DC40\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"TABNAM\": \"EDI_DC40\",\r\n                \"MANDT\": \"100\",\r\n                \"DOCNUM\": \"0000000000099044\",\r\n                \"DOCREL\": \"702\",\r\n                \"STATUS\": \"30\",\r\n                \"DIRECT\": \"1\",\r\n                \"OUTMOD\": \"2\",\r\n                \"IDOCTYP\": \"ZPAY_BT\",\r\n                \"MESTYP\": \"ZPAY_MT\",\r\n                \"STDMES\": \"ZPAY_M\",\r\n                \"SNDPOR\": \"SAPEED\",\r\n                \"SNDPRT\": \"LS\",\r\n                \"SNDPRN\": \"EEDCLNT100\",\r\n                \"RCVPOR\": \"LOGIC_APP\",\r\n                \"RCVPRT\": \"US\",\r\n                \"RCVPRN\": \"LOGIC_APP\",\r\n                \"CREDAT\": \"20190927\",\r\n                \"CRETIM\": \"004749\"\r\n            },\r\n            \"ZPAY01\": {\r\n                \"@SEGMENT\": \"1\",\r\n                \"CAAPS_ID\": \"A12345\",\r\n                \"PAYMENT_STATUS\": \"SUCCESS\",\r\n                \"PAYMENT_DATE\": \"2019-09-08\",\r\n                \"PAYMENT_AMOUNT\": \"2000\",\r\n                \"PAYMENT_METHOD\": \"CARD\",\r\n                \"CLIENT_TR_ID\": \"A1234\",\r\n                \"PAYMENT_BATCH\": \"ADELAIDE\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/payment-updates/bulk",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"payment-updates",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/payment-updates",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"payment-updates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/payment-updates/31",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"payment-updates",
+						"31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePayment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/payment-updates/31",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"payment-updates",
+						"31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePurchaseOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"?xml\": {\r\n    \"@version\": \"1.0\",\r\n    \"@encoding\": \"UTF-8\"\r\n  },\r\n  \"ZPO_BT\": {\r\n    \"IDOC\": {\r\n      \"@BEGIN\": \"1\",\r\n      \"EDI_DC40\": {\r\n        \"@SEGMENT\": \"1\",\r\n        \"TABNAM\": \"EDI_DC40\",\r\n        \"MANDT\": \"100\",\r\n        \"DOCNUM\": \"0000000000099126\",\r\n        \"DOCREL\": \"702\",\r\n        \"STATUS\": \"30\",\r\n        \"DIRECT\": \"1\",\r\n        \"OUTMOD\": \"2\",\r\n        \"IDOCTYP\": \"ZPO_BT\",\r\n        \"MESTYP\": \"ZPURCHASE_MT\",\r\n        \"STDMES\": \"ZPURCH\",\r\n        \"SNDPOR\": \"SAPEED\",\r\n        \"SNDPRT\": \"LS\",\r\n        \"SNDPRN\": \"EEDCLNT100\",\r\n        \"RCVPOR\": \"LOGIC_APP\",\r\n        \"RCVPRT\": \"US\",\r\n        \"RCVPRN\": \"LOGIC_APP\",\r\n        \"CREDAT\": \"20191014\",\r\n        \"CRETIM\": \"175227\"\r\n      },\r\n      \"ZPO01\": {\r\n        \"@SEGMENT\": \"1\",\r\n        \"ENTITY_CODE\": \"2001\",\r\n        \"PO_DATE\": \"2019-05-01\",\r\n        \"PO_RAISED_BY_USERNAME\": \"X0100050\",\r\n        \"PO_REQUISTIONER_USERNAME\": \"X0100050\",\r\n        \"PO_NUMBER\": \"3000459247\",\r\n        \"PO_ORIGINAL_AMOUNT_TAX_EX\": \"638.34\",\r\n        \"PO_OPEN_AMOUNT_TAX_EX\": \"0\",\r\n        \"PO_TYPE\": \"ECPO\",\r\n        \"PO_STATUS_CODE\": \"C\",\r\n        \"PO_CURRENCY_CODE\": \"AUD\",\r\n        \"LINE_EXPECTED_DATE\": \"2019-05-04\",\r\n        \"LINE_NUMBER\": \"1\",\r\n        \"LINE_PRODUCT_CODE\": \"18955322\",\r\n        \"LINE_ORIGINAL_QUANTITY\": \"2\",\r\n        \"LINE_OPEN_QUANTITY\": \"1\",\r\n        \"LINE_ORIGINAL_AMOUNT_TAX_EX\": \"35.34\",\r\n        \"LINE_OPEN_AMOUNT_TAX_EX\": \"0\",\r\n        \"LINE_UOM\": \"PAC\",\r\n        \"LINE_UNIT_PRICE\": \"17.67\",\r\n        \"LINE_TAX_CODE\": \"C1\",\r\n        \"LINE_GL_CODE\": \"659000\",\r\n        \"LINE_DESCRIPTION\": \"ELDERS PLASTIC BAGS PACK/50\",\r\n        \"VENDOR_CODE\": \"2001380\"\r\n      }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/purchase-orders",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"purchase-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateManyPurchaseOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"?xml\": {\r\n    \"@version\": \"1.0\",\r\n    \"@encoding\": \"UTF-8\"\r\n  },\r\n  \"ZPO_BT\": {\r\n    \"IDOC\": {\r\n      \"@BEGIN\": \"1\",\r\n      \"EDI_DC40\": {\r\n        \"@SEGMENT\": \"1\",\r\n        \"TABNAM\": \"EDI_DC40\",\r\n        \"MANDT\": \"100\",\r\n        \"DOCNUM\": \"0000000000099127\",\r\n        \"DOCREL\": \"702\",\r\n        \"STATUS\": \"30\",\r\n        \"DIRECT\": \"1\",\r\n        \"OUTMOD\": \"2\",\r\n        \"IDOCTYP\": \"ZPO_BT\",\r\n        \"MESTYP\": \"ZPURCHASE_MT\",\r\n        \"STDMES\": \"ZPURCH\",\r\n        \"SNDPOR\": \"SAPEED\",\r\n        \"SNDPRT\": \"LS\",\r\n        \"SNDPRN\": \"EEDCLNT100\",\r\n        \"RCVPOR\": \"LOGIC_APP\",\r\n        \"RCVPRT\": \"US\",\r\n        \"RCVPRN\": \"LOGIC_APP\",\r\n        \"CREDAT\": \"20191014\",\r\n        \"CRETIM\": \"180218\"\r\n      },\r\n      \"ZPO01\": [\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"PO_DATE\": \"2019-05-01\",\r\n          \"PO_RAISED_BY_USERNAME\": \"X0106185\",\r\n          \"PO_REQUISTIONER_USERNAME\": \"X0106185\",\r\n          \"PO_NUMBER\": \"3000459240\",\r\n          \"PO_ORIGINAL_AMOUNT_TAX_EX\": \"165.09\",\r\n          \"PO_OPEN_AMOUNT_TAX_EX\": \"165.09\",\r\n          \"PO_TYPE\": \"ECPO\",\r\n          \"PO_STATUS_CODE\": \"O\",\r\n          \"PO_CURRENCY_CODE\": \"AUD\",\r\n          \"LINE_EXPECTED_DATE\": \"2019-05-01\",\r\n          \"LINE_NUMBER\": \"1\",\r\n          \"LINE_PRODUCT_CODE\": \"Y46002 BLA SIZE 16\",\r\n          \"LINE_ORIGINAL_QUANTITY\": \"1\",\r\n          \"LINE_OPEN_QUANTITY\": \"1\",\r\n          \"LINE_ORIGINAL_AMOUNT_TAX_EX\": \"49.18\",\r\n          \"LINE_OPEN_AMOUNT_TAX_EX\": \"49.18\",\r\n          \"LINE_UOM\": \"EA\",\r\n          \"LINE_UNIT_PRICE\": \"49.18\",\r\n          \"LINE_TAX_CODE\": \"C1\",\r\n          \"LINE_GL_CODE\": \"650505\",\r\n          \"LINE_DESCRIPTION\": \"WOMENS PUFFER VEST BLACK\",\r\n          \"VENDOR_CODE\": \"2011891\"\r\n        },\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"PO_DATE\": \"2019-05-01\",\r\n          \"PO_RAISED_BY_USERNAME\": \"X0106185\",\r\n          \"PO_REQUISTIONER_USERNAME\": \"X0106185\",\r\n          \"PO_NUMBER\": \"3000459240\",\r\n          \"PO_ORIGINAL_AMOUNT_TAX_EX\": \"165.09\",\r\n          \"PO_OPEN_AMOUNT_TAX_EX\": \"165.09\",\r\n          \"PO_TYPE\": \"ECPO\",\r\n          \"PO_STATUS_CODE\": \"O\",\r\n          \"PO_CURRENCY_CODE\": \"AUD\",\r\n          \"LINE_EXPECTED_DATE\": \"2019-05-01\",\r\n          \"LINE_NUMBER\": \"2\",\r\n          \"LINE_PRODUCT_CODE\": \"Y17019 - BLA SIZE 16\",\r\n          \"LINE_ORIGINAL_QUANTITY\": \"1\",\r\n          \"LINE_OPEN_QUANTITY\": \"1\",\r\n          \"LINE_ORIGINAL_AMOUNT_TAX_EX\": \"53.18\",\r\n          \"LINE_OPEN_AMOUNT_TAX_EX\": \"53.18\",\r\n          \"LINE_UOM\": \"EA\",\r\n          \"LINE_UNIT_PRICE\": \"53.18\",\r\n          \"LINE_TAX_CODE\": \"C1\",\r\n          \"LINE_GL_CODE\": \"650505\",\r\n          \"LINE_DESCRIPTION\": \"WOMENS SOFTSHELL BONDED VEST BLACK\",\r\n          \"VENDOR_CODE\": \"2011891\"\r\n        },\r\n        {\r\n          \"@SEGMENT\": \"1\",\r\n          \"ENTITY_CODE\": \"2001\",\r\n          \"PO_DATE\": \"2019-05-01\",\r\n          \"PO_RAISED_BY_USERNAME\": \"X0106185\",\r\n          \"PO_REQUISTIONER_USERNAME\": \"X0106185\",\r\n          \"PO_NUMBER\": \"3000459240\",\r\n          \"PO_ORIGINAL_AMOUNT_TAX_EX\": \"165.09\",\r\n          \"PO_OPEN_AMOUNT_TAX_EX\": \"165.09\",\r\n          \"PO_TYPE\": \"ECPO\",\r\n          \"PO_STATUS_CODE\": \"O\",\r\n          \"PO_CURRENCY_CODE\": \"AUD\",\r\n          \"LINE_EXPECTED_DATE\": \"2019-05-01\",\r\n          \"LINE_NUMBER\": \"3\",\r\n          \"LINE_PRODUCT_CODE\": \"Y83801 BLA SIZE XLARGE\",\r\n          \"LINE_ORIGINAL_QUANTITY\": \"1\",\r\n          \"LINE_OPEN_QUANTITY\": \"1\",\r\n          \"LINE_ORIGINAL_AMOUNT_TAX_EX\": \"62.73\",\r\n          \"LINE_OPEN_AMOUNT_TAX_EX\": \"62.73\",\r\n          \"LINE_UOM\": \"EA\",\r\n          \"LINE_UNIT_PRICE\": \"62.73\",\r\n          \"LINE_TAX_CODE\": \"C1\",\r\n          \"LINE_GL_CODE\": \"650505\",\r\n          \"LINE_DESCRIPTION\": \"WOMENS SOFTSHELL ZIP JACKET BLACK\",\r\n          \"VENDOR_CODE\": \"2011891\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/purchase-orders/bulk",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"purchase-orders",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePurchaseOrder",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"?xml\": {\r\n    \"@version\": \"1.0\",\r\n    \"@encoding\": \"UTF-8\"\r\n  },\r\n  \"ZPO_BT\": {\r\n    \"IDOC\": {\r\n      \"@BEGIN\": \"1\",\r\n      \"EDI_DC40\": {\r\n        \"@SEGMENT\": \"1\",\r\n        \"TABNAM\": \"EDI_DC40\",\r\n        \"MANDT\": \"100\",\r\n        \"DOCNUM\": \"0000000000099126\",\r\n        \"DOCREL\": \"702\",\r\n        \"STATUS\": \"30\",\r\n        \"DIRECT\": \"1\",\r\n        \"OUTMOD\": \"2\",\r\n        \"IDOCTYP\": \"ZPO_BT\",\r\n        \"MESTYP\": \"ZPURCHASE_MT\",\r\n        \"STDMES\": \"ZPURCH\",\r\n        \"SNDPOR\": \"SAPEED\",\r\n        \"SNDPRT\": \"LS\",\r\n        \"SNDPRN\": \"EEDCLNT100\",\r\n        \"RCVPOR\": \"LOGIC_APP\",\r\n        \"RCVPRT\": \"US\",\r\n        \"RCVPRN\": \"LOGIC_APP\",\r\n        \"CREDAT\": \"20191014\",\r\n        \"CRETIM\": \"175227\"\r\n      },\r\n      \"ZPO01\": {\r\n        \"@SEGMENT\": \"1\",\r\n        \"ENTITY_CODE\": \"2001\",\r\n        \"PO_DATE\": \"2019-05-01\",\r\n        \"PO_RAISED_BY_USERNAME\": \"X0100050X\",\r\n        \"PO_REQUISTIONER_USERNAME\": \"X0100050X\",\r\n        \"PO_NUMBER\": \"3000459247\",\r\n        \"PO_ORIGINAL_AMOUNT_TAX_EX\": \"638.34\",\r\n        \"PO_OPEN_AMOUNT_TAX_EX\": \"0\",\r\n        \"PO_TYPE\": \"ECPO\",\r\n        \"PO_STATUS_CODE\": \"C\",\r\n        \"PO_CURRENCY_CODE\": \"AUD\",\r\n        \"LINE_EXPECTED_DATE\": \"2019-05-04\",\r\n        \"LINE_NUMBER\": \"1\",\r\n        \"LINE_PRODUCT_CODE\": \"18955322\",\r\n        \"LINE_ORIGINAL_QUANTITY\": \"2\",\r\n        \"LINE_OPEN_QUANTITY\": \"0\",\r\n        \"LINE_ORIGINAL_AMOUNT_TAX_EX\": \"35.34\",\r\n        \"LINE_OPEN_AMOUNT_TAX_EX\": \"0\",\r\n        \"LINE_UOM\": \"PAC\",\r\n        \"LINE_UNIT_PRICE\": \"17.67\",\r\n        \"LINE_TAX_CODE\": \"C1\",\r\n        \"LINE_GL_CODE\": \"659000\",\r\n        \"LINE_DESCRIPTION\": \"ELDERS PLASTIC BAGS PACK/50\",\r\n        \"VENDOR_CODE\": \"2001380\"\r\n      }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/purchase-orders/681",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"purchase-orders",
+						"681"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPurchaseOrders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/purchase-orders",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"purchase-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPurchaseOrder",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/purchase-orders/681",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"purchase-orders",
+						"681"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePurchaseOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Ocp-Apim-Trace",
+						"type": "text",
+						"value": "true"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://ad-api-prod.azure-api.net/caaps-api/api/purchase-orders/681",
+					"protocol": "https",
+					"host": [
+						"ad-api-prod",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"caaps-api",
+						"api",
+						"purchase-orders",
+						"681"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

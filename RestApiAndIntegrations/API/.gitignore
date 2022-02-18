@@ -1,0 +1,7 @@
+appsettings.json
+appsettings.Development - local.json
+appsettings.Development.json
+appsettings.Test - local.json
+appsettings.Test.json
+appsettings.Production - local.json
+appsettings.Production.json

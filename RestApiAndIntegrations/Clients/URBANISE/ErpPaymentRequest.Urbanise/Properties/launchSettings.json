@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PaymentRequest.Module.Urbanise": {
+      "commandName": "Project",
+      "commandLineArgs": "--max-records=10 --dry-run=True"
+    }
+  }
+}

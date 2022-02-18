@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "8ec81bbe-a472-41e6-b3b7-4cac0723aae9",
+		"name": "ELDERS_INTEGRATION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MIRO Posting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{x-sas-token-key}}",
+						"value": "{{x-sas-token-value}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"?xml\": {\n        \"@version\": \"1.0\",\n        \"@encoding\": \"UTF-8\"\n    },\n    \"tns:Send\": {\n        \"@xmlns:xsi\": \"http://www.w3.org/2001/XMLSchema-instance\",\n        \"@xmlns:q1\": \"http://Microsoft.LobServices.Sap/2007/03/Types/Idoc/Common/\",\n        \"@xmlns:tns\": \"http://Microsoft.LobServices.Sap/2007/03/Idoc/3/ZMIRO_BT//702/Send\",\n        \"@xmlns:q2\": \"http://Microsoft.LobServices.Sap/2007/03/Types/Idoc/3/ZMIRO_BT//702\",\n        \"@xsi:schemaLocation\": \"http://Microsoft.LobServices.Sap/2007/03/Idoc/3/ZMIRO_BT//702/Send IDocOperation.ZMIRO_BT.702.3.Send.Send\",\n        \"tns:idocData\": {\n            \"q2:EDI_DC40\": {\n                \"q2:EDI_DC40\": {\n                    \"q1:DOCREL\": \"702\",\n                    \"q1:STATUS\": \"30\",\n                    \"q1:DIRECT\": \"2\",\n                    \"q1:OUTMOD\": \"2\",\n                    \"q1:IDOCTYP\": \"ZMIRO_BT\",\n                    \"q1:MESTYP\": \"ZMIRO_MT\",\n                    \"q1:RCVPOR\": \"SAPEED\"\n                }\n            },\n            \"q2:ZMIRO01000\": [\n                {\n                    \"q2:PO_DOC_DATE\": \"20190114\",\n                    \"q2:PO_POST_DATE\": \"20200422\",\n                    \"q2:PO_COMP_CODE\": \"2001\",\n                    \"q2:PO_GROSS_AMT\": 220,\n                    \"q2:PO_CURR\": \"AUD\",\n                    \"q2:PO_TAX_CALC_IND\": \"X\",\n                    \"q2:PO_NUMBER\": \"3000459817\",\n                    \"q2:PO_REF_DOC_YR\": 2019,\n                    \"q2:PO_VENDOR\": \"2003762\",\n                    \"q2:PO_URL_LINK\": \"Z:\\\\DOCUMENTS\\\\ELDERS_SAP_CAAPS\\\\LIVE\\\\REPOSITORY\\\\2020\\\\02\\\\20\\\\D00000006.PDF\",\n                    \"q2:PO_REF_DOC_NO\": \"76313\",\n                    \"q2:PO_DOC_TYPE\": \"RE\",\n                    \"q2:CAAPS_UNIQUE_ID\": \"D00000006\",\n                    \"q2:BSB_BANK_ACCOUNT\": \"10268401\",\n                    \"q2:PO_ITEM\": \"1\",\n                    \"q2:PO_LINE_NO\": \"1\",\n                    \"q2:PO_TAX_CODE\": \"C1\",\n                    \"q2:PO_UNIT\": \"EA\",\n                    \"q2:PO_GRLINE_AMT\": 200,\n                    \"q2:PO_QTY\": 1,\n                    \"q2:PO_REF_DOC\": \"5000557403\"\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{qa-endpoint}}",
+					"host": [
+						"{{qa-endpoint}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

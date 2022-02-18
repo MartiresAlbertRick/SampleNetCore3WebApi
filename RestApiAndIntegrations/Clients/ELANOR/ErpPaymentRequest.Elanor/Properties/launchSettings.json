@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PaymentRequest.Module.Elanor": {
+      "commandName": "Project",
+      "commandLineArgs": "Execute"
+    }
+  }
+}

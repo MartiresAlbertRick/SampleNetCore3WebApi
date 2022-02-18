@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <ApplicationIcon>..\..\..\Common.Resources\AcumenData.ico</ApplicationIcon>
+    <RootNamespace>AD.CAAPS.ErpPaymentRequest.Urbanise</RootNamespace>
+    <AssemblyName>ErpPaymentRequest.Urbanise</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>URBANISE_ENDPOINT_REQUESTS_ENABLED</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>URBANISE_ENDPOINT_REQUESTS_ENABLED</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings-sample.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.7.82" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.csproj" />
+    <ProjectReference Include="..\..\..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\..\..\Services\Services.csproj" />
+    <ProjectReference Include="..\..\..\Common.CommandLine\Common.CommandLine.csproj" />
+    <ProjectReference Include="..\..\Common\ErpPaymentRequest.Common\ErpPaymentRequest.Common.csproj" />
+  </ItemGroup>
+
+</Project>
